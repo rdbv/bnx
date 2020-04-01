@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <script src="static/utils.js"></script>
+
+    <title>BNX</title>
+
+    <script>
+        window.onload = function() {
+            {% block js_load %}
+            {% endblock %}
+        }
+        {% block js %}
+        {% endblock %}
+    </script>
+
+</head>
+
+<body>
+    {% if session['id'] %}
+    <ul class="nb">
+        <li id="panel" class="nbl"><a href="/">Panel</a></li>
+        <li id="cam" class="nbl"><a href="/cam">Kamery</a></li>
+        <li class="nbl" id="logout" style="float: right"><a href="/logout">Wyloguj</a></li>
+    </ul>
+    {% else %}
+    <ul class="nb">
+        <li class="nbl active"><a id="login" href="/login">Login</a></li>
+    </ul>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
+

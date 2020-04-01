@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block js_load %}
+    selectNavbar('cam')
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block content %}
+
+    <div style="height: 10em;" class="dcenter">
+        {% for photo in photos %}
+            <img src="{{photo}}" style="height:300px; width: 300px">
+        {% endfor %}
+    </div>
+
+{% endblock %}

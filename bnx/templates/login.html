@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   
+    <div class="dcenter">
+        {% for type, message in messages.messages %}
+            <p> {{ message }} </p>
+        {% endfor %}
+
+        <form method="post">
+            <input name="login" id="login" placeholder="Login" required>
+            <input type="password" name="password" id="password" placeholder="Hasło" required>
+            <input style="margin: 0 auto;" type="submit" value="Zaloguj">
+        </form>
+    </div>
+
+{% endblock %}

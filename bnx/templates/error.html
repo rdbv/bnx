@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block js_load %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="dcenter">
+        <h4> Error </h4>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4> {{message}} </h4>
+                {% endfor %}
+            {% endif %} 
+        {% endwith %}
+    </div>
+
+{% endblock %}

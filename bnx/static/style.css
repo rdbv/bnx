@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: dimgray;
+}
+
+.nb {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nbl {
+  float: left;
+}
+
+.nb a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nb li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: gray;
+}
+
+div.dcenter {
+    height: 50em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.dcenter p {
+    display: flex;
+    margin: 5px;
+}
+
+div.dcenter input {
+    display: flex;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+div.dcenter input[type="submit" i] {
+    border-radius: 4px;
+    margin: 5px;
+}
+
